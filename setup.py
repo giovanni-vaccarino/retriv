@@ -31,7 +31,6 @@ setuptools.setup(
         "torchaudio",
         "transformers[torch]",
         "faiss-cpu",
-        "autofaiss",
         "multipipe",
     ],
     classifiers=[

@@ -34,5 +34,5 @@ dependencies:
     - torchaudio
     - transformers[torch]
     - faiss-cpu
-    - autofaiss
+    #- autofaiss
     - multipipe

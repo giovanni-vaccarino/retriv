@@ -1,4 +1,3 @@
-autofaiss
 faiss-cpu
 indxr
 krovetzstemmer

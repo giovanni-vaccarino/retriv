@@ -3,7 +3,10 @@ import math
 import faiss
 import numpy as np
 import psutil
-from autofaiss import build_index
+try:
+    import autofaiss
+except ImportError:
+    autofaiss = None
 from oneliner_utils import read_json
 
 from ..paths import embeddings_folder_path, faiss_index_infos_path, faiss_index_path
@@ -24,7 +27,7 @@ class ANN_Searcher:
         self.faiss_index_infos = None
 
     def build(self, use_gpu=False):
-        index, index_infos = build_index(
+        index, index_infos = autofaiss.build_index(
             embeddings=str(embeddings_folder_path(self.index_name)),
             index_path=str(faiss_index_path(self.index_name)),
             index_infos_path=str(faiss_index_infos_path(self.index_name)),
