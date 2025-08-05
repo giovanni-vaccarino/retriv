@@ -1,6 +1,7 @@
+# -*- coding: utf-8 -*-
 import setuptools
 
-with open("README.md", "r") as fh:
+with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setuptools.setup(
@@ -20,7 +21,6 @@ setuptools.setup(
         "tqdm",
         "optuna",
         "krovetzstemmer",
-        "pystemmer==2.0.1",
         "unidecode",
         "scikit-learn",
         "ranx",
