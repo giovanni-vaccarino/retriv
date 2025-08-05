@@ -3,7 +3,6 @@ from typing import Union
 
 import nltk
 from krovetzstemmer import Stemmer as KrovetzStemmer
-from Stemmer import Stemmer as SnowballStemmer
 
 from .utils import identity_function
 
@@ -14,32 +13,32 @@ stemmers_dict = {
     "arlstem": partial(nltk.stem.ARLSTem().stem),  # Arabic
     "arlstem2": partial(nltk.stem.ARLSTem2().stem),  # Arabic
     "cistem": partial(nltk.stem.Cistem().stem),  # German
-    "isri": partial(nltk.stem.ISRIStemmer().stem),  # Arabic
-    "arabic": partial(SnowballStemmer("arabic").stemWord),
-    "basque": partial(SnowballStemmer("basque").stemWord),
-    "catalan": partial(SnowballStemmer("catalan").stemWord),
-    "danish": partial(SnowballStemmer("danish").stemWord),
-    "dutch": partial(SnowballStemmer("dutch").stemWord),
+    # "isri": partial(nltk.stem.ISRIStemmer().stem),  # Arabic
+    # "arabic": partial(SnowballStemmer("arabic").stemWord),
+    # "basque": partial(SnowballStemmer("basque").stemWord),
+    # "catalan": partial(SnowballStemmer("catalan").stemWord),
+    # "danish": partial(SnowballStemmer("danish").stemWord),
+    # "dutch": partial(SnowballStemmer("dutch").stemWord),
     "english": partial(nltk.stem.SnowballStemmer("english").stem),
-    "finnish": partial(SnowballStemmer("finnish").stemWord),
-    "french": partial(SnowballStemmer("french").stemWord),
-    "german": partial(SnowballStemmer("german").stemWord),
-    "greek": partial(SnowballStemmer("greek").stemWord),
-    "hindi": partial(SnowballStemmer("hindi").stemWord),
-    "hungarian": partial(SnowballStemmer("hungarian").stemWord),
-    "indonesian": partial(SnowballStemmer("indonesian").stemWord),
-    "irish": partial(SnowballStemmer("irish").stemWord),
-    "italian": partial(SnowballStemmer("italian").stemWord),
-    "lithuanian": partial(SnowballStemmer("lithuanian").stemWord),
-    "nepali": partial(SnowballStemmer("nepali").stemWord),
-    "norwegian": partial(SnowballStemmer("norwegian").stemWord),
-    "portuguese": partial(SnowballStemmer("portuguese").stemWord),
-    "romanian": partial(SnowballStemmer("romanian").stemWord),
-    "russian": partial(SnowballStemmer("russian").stemWord),
-    "spanish": partial(SnowballStemmer("spanish").stemWord),
-    "swedish": partial(SnowballStemmer("swedish").stemWord),
-    "tamil": partial(SnowballStemmer("tamil").stemWord),
-    "turkish": partial(SnowballStemmer("turkish").stemWord),
+    # "finnish": partial(SnowballStemmer("finnish").stemWord),
+    # "french": partial(SnowballStemmer("french").stemWord),
+    # "german": partial(SnowballStemmer("german").stemWord),
+    # "greek": partial(SnowballStemmer("greek").stemWord),
+    # "hindi": partial(SnowballStemmer("hindi").stemWord),
+    # "hungarian": partial(SnowballStemmer("hungarian").stemWord),
+    # "indonesian": partial(SnowballStemmer("indonesian").stemWord),
+    # "irish": partial(SnowballStemmer("irish").stemWord),
+    # "italian": partial(SnowballStemmer("italian").stemWord),
+    # "lithuanian": partial(SnowballStemmer("lithuanian").stemWord),
+    # "nepali": partial(SnowballStemmer("nepali").stemWord),
+    # "norwegian": partial(SnowballStemmer("norwegian").stemWord),
+    # "portuguese": partial(SnowballStemmer("portuguese").stemWord),
+    # "romanian": partial(SnowballStemmer("romanian").stemWord),
+    # "russian": partial(SnowballStemmer("russian").stemWord),
+    # "spanish": partial(SnowballStemmer("spanish").stemWord),
+    # "swedish": partial(SnowballStemmer("swedish").stemWord),
+    # "tamil": partial(SnowballStemmer("tamil").stemWord),
+    # "turkish": partial(SnowballStemmer("turkish").stemWord),
 }
 
 

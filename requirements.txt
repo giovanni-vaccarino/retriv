@@ -8,7 +8,6 @@ numba>=0.54.1
 numpy
 oneliner_utils
 optuna
-pystemmer==2.0.1
 ranx
 scikit-learn
 torch
