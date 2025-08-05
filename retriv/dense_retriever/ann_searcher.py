@@ -3,7 +3,7 @@ import math
 import faiss
 import numpy as np
 import psutil
-from autofaiss.build_index import build_index
+from autofaiss import build_index
 from oneliner_utils import read_json
 
 from ..paths import embeddings_folder_path, faiss_index_infos_path, faiss_index_path
