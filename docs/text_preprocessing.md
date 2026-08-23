@@ -13,7 +13,7 @@ To select your preferred language simply use `<language>` .
 - [arlstem2](https://www.nltk.org/api/nltk.stem.arlstem2.html) (Arabic)
 - [cistem](https://www.nltk.org/api/nltk.stem.cistem.html) (German)
 - [isri](https://www.nltk.org/api/nltk.stem.isri.html) (Arabic)
-- [krovetz](https://dl.acm.org/doi/10.1145/160688.160718) (English)
+- [krovetz](https://dl.acm.org/doi/10.1145/160688.160718) (English) — optional, requires `pip install retriv[krovetz]` (needs a C++ build toolchain)
 - [lancaster](https://www.nltk.org/api/nltk.stem.lancaster.html) (English)
 - [porter](https://www.nltk.org/api/nltk.stem.porter.html) (English)
 

@@ -2,12 +2,10 @@ from functools import partial
 from typing import Union
 
 import nltk
-from krovetzstemmer import Stemmer as KrovetzStemmer
 
 from .utils import identity_function
 
 stemmers_dict = {
-    "krovetz": partial(KrovetzStemmer()),
     "porter": partial(nltk.stem.PorterStemmer().stem),
     "lancaster": partial(nltk.stem.LancasterStemmer().stem),
     "arlstem": partial(nltk.stem.ARLSTem().stem),  # Arabic
@@ -43,6 +41,18 @@ stemmers_dict = {
 
 
 def krovetz_f(x: str) -> str:
+    # krovetzstemmer is an optional dependency: it is a C++ extension with no
+    # prebuilt wheels, so it is imported lazily to keep base installs
+    # (e.g. on Windows without build tools) working.
+    if "krovetz" not in stemmers_dict:
+        try:
+            from krovetzstemmer import Stemmer as KrovetzStemmer
+        except ImportError as e:
+            raise ImportError(
+                "The 'krovetz' stemmer requires the optional 'krovetzstemmer' "
+                "package. Install it with: pip install KrovetzStemmer"
+            ) from e
+        stemmers_dict["krovetz"] = partial(KrovetzStemmer())
     return stemmers_dict["krovetz"](x)
 
 

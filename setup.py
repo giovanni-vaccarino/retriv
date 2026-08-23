@@ -20,7 +20,6 @@ setuptools.setup(
         "numba>=0.54.1",
         "tqdm",
         "optuna",
-        "krovetzstemmer",
         "unidecode",
         "scikit-learn",
         "ranx",
@@ -33,6 +32,10 @@ setuptools.setup(
         "faiss-cpu",
         "multipipe",
     ],
+    extras_require={
+        # C++ extension with no prebuilt wheels; needs a build toolchain.
+        "krovetz": ["krovetzstemmer"],
+    },
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
